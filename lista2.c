@@ -9,16 +9,16 @@ EXERCÍCIOS DO CAPÍTULO 2
 //1. Faça um programa que leia dois valores numéricos inteiros e efetue a adição, caso o resultado seja maior que 10, apresentá-lo.
 void questao01() {
 int valor1, valor2, resultado;
-	printf(" Digite o primeiro valor:");
-		scanf("%d", &valor1);
+printf(" Digite o primeiro valor:");
+	scanf("%d", &valor1);
 
-	printf(" Digite o segundo valor:");
-		scanf("%d", &valor2);
+printf(" Digite o segundo valor:");
+	scanf("%d", &valor2);
 
-		resultado = valor1 + valor2;
+	resultado = valor1 + valor2;
 
-		if(resultado > 10) {
-			printf("O resultado da adição é: %d\n", resultado);
+	if(resultado > 10) {
+		printf("O resultado da adição é: %d\n", resultado);
 		}
 
 return 0;
@@ -52,8 +52,6 @@ return 0;
 //3. Faça um programa que leia um número e imprima uma das duas mensagens: "É múltiplo de 3"ou "Não é múltiplo de 3".
 void questao03() {
 	int numero;
-	printf(" Digite o primeiro valor:");
-		scanf("%d", &valor1);
 
 	printf(" Digite um numero:");
 		scanf("%d", &numero);
@@ -72,8 +70,24 @@ return 0;
 //4. Faça um programa que leia um número e informe se ele é ou não divisível por 5.
 void questao04() {
 	int numero;
-	printf(" Digite o primeiro valor:");
-		scanf("%d", &valor1);
+
+	printf(" Digite um numero:");
+		scanf("%d", &numero);
+
+		if(numero % 5 == 0) {
+			printf("É divisivel por 5: %d\n", numero);
+		}
+		else {
+			printf("Não é divisivel por 5: %d\n", numero)
+		}
+
+return 0;
+
+}
+
+//5. Faça um programa que leia um número e informe se ele é divisível por 3 e por 7.
+void questao05() {
+int numero;
 
 	printf(" Digite um numero:");
 		scanf("%d", &numero);
@@ -89,47 +103,147 @@ return 0;
 
 }
 
-//5. Faça um programa que leia um número e informe se ele é divisível por 3 e por 7.
-void questao05() {
-
-}
-
 //6. A prefeitura do Rio de Janeiro abriu uma linha de crédito para os funcionários
 //estatutários. O valor máximo da prestação não poderá ultrapassar 30% do salário
 //bruto. Faça um programa em linguagem C que permita entrar com o salário bruto e o
 //valor da prestação e informar se o empréstimo pode ou não ser concedido.
 void questao06() {
+float salarioBruto, valorPrestacoes, limitePrestacoes;
 
+	printf("Digite o salario bruto:");
+		scanf("%f", &salarioBruto);
+
+	printf("Digite o valor das prestações:");
+		scanf("%f" &valorPrestacoes);
+
+		limitePrestacoes = salarioBruto * 0.3  // referente a 30% do salario bruto
+
+	if (valorPrestacoes <= limitePrestacoes){
+		printf("Emprestimo concedido! \n");
+	}
+
+	else {
+		printf("Emprestimo nao concedido! O valor excede a 30% do salario bruto. \n");
+	}
+	return 0;
 }
 
 //7. Faça um programa que leia um número e indique se o número está compreendido
 //entre 20 e 50 ou não.
 void questao07() {
+int numero;
 
+	printf(" Digite um numero:");
+		scanf("%d", &numero);
+		if(numero >= 20 && numero <= 50) {
+			printf("Está entre 20 e 50: %d\n", numero);
+		}
+		else {
+			printf("Não está entre 20 e 50: %d\n", numero)
+		}
+
+return 0;
 }
 
 //8. Faça um programa que leia um número e imprima uma das mensagens: 
 //"Maior do que 20", "Igual a 20"ou "Menor do que 20".
 void questao08() {
-	
+	int numero;
+
+	printf(" Digite um numero:");
+		scanf("%d", &numero);
+
+		if(numero > 20) {
+			printf("É maior que 20: %d\n", numero);
+		}
+		if(numero < 20) {
+			printf("É menor que 20: %d\n", numero);
+		}
+		else {
+			printf("É igual a 20: %d\n", numero)
+		}
+
+return 0;
 }
 
 //9. Faça um programa que permita entrar com o ano de nascimento da pessoa e como ano
 //atual. O programa deve imprimir a idade da pessoa. Não se esqueça de verificar se o
 //ano de nascimento informado é válido.
 void questao09() {
-	
+	int anoNascimento, anoAtual, idade;
+
+	printf(" Digite o ano de nascimento:");
+		scanf("%d", &anoNascimento);
+
+	printf(" Digite o ano atual:");
+		scanf("%d", &anoAtual);
+
+		idade = anoAtual - anoNascimento
+
+	if( anoNascimento >= anoAtual){
+			printf(" Ano de nascimento inválido \n");
+		}
+		else {
+			printf("A idade da pessoa é: %d \n", idade);
+		}
+
+	return 0;
+
 }
 
 //10. Faça um programa que leia três números inteiros e imprima os três em ordem
 //crescente.
 void questao10() {
+int n1,n2,n3;
 
-}
+	printf(" Digite o primeiro numero inteiro:");
+		scanf("%d", &n1,);
+
+	printf(" Digite o segundo numero inteiro:");
+		scanf("%d", &n2,);
+
+	printf(" Digite o primeiro numero inteiro:");
+		scanf("%d", &n3,);
+
+		if(n1 <= n2 && n1 <= n3){
+			printf("%d", n1);
+			}
+		if(n2 >= n1 && n2 <= n3 ){
+			printf("%d", n2);
+			}
+		if(n3 >= n1 && n3 >= n2 ){
+			printf("%d", n3);
+		}
+			printf("%d,%d,%d", n1,n2,n3);
+
+	return 0;		
+		
+		}
 
 //11. Faça um programa que leia 3 números e imprima o maior deles.
 void questao11() {
-	
+int n1,n2,n3;
+
+	printf(" Digite o primeiro numero inteiro:");
+		scanf("%d", &n1,);
+
+	printf(" Digite o segundo numero inteiro:");
+		scanf("%d", &n2,);
+
+	printf(" Digite o primeiro numero inteiro:");
+		scanf("%d", &n3,);	
+
+	if(n1 >= n2 && n1 >= n3){
+			printf("%d", n1);
+			}
+	else if(n2 >= n1 && n2 >= n3){
+			printf("%d", n2);
+			}
+	else{
+			printf("%d", n3);
+			}
+
+	return 0;
 }
 
 //12. Faça um programa que leia a idade de uma pessoa e informe:
@@ -137,12 +251,39 @@ void questao11() {
 //• Se é menor de idade
 //• Se é maior de 65 anos
 void questao12() {
+	int idade, maiorIdade, maior65;
+
+printf(" Digite sua idade:");
+		scanf("%d", &idade);
 	
+	if( idade >= 18){
+			printf(" Maior de idade \n");
+		}
+	if( idade <= 18){
+			printf(" menor de idade \n");
+		}
+	if( idade > 65){
+			printf(" Maior de 65 anos \n");
+		}
+	
+	return 0;
 }
 
 //13. Faça um programa que permita entrar com o nome, a nota da prova 1 e a nota da
 //prova 2 de umaluno. O programa deve imprimir o nome, a nota da prova 1, a nota da prova 2, a média das notas e uma das mensagens: "Aprovado", "Reprovado"ou "em Prova Final"(a média é 7 para aprovação, menor que 3 para reprovação e as demais em prova final).
 void questao13() {
+	char [50]
+	int prova1,prova2
+
+	printf("Digite seu nome:");
+		scanf("%s",nome);
+
+	printf("Digite a nota da primeira prova:");
+		scanf("%d",prova1);
+
+	printf("Digite a nota da segunda prova:");
+		scanf("%d",prova2);
+
 	
 }
 
