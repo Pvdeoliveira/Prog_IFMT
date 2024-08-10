@@ -54,9 +54,9 @@ void q03() {
 //e tiver mais de 21 anos.
 void q04(){
     int idade;
-    char nome[50];
+    char nome;
     char sexo;
-    for( int c = 0; c < 20; c++)
+    for( int c = 0; c < 20; c++){
         printf("Digite seu nome:\n");
         scanf("%s", &nome);
 
@@ -67,19 +67,44 @@ void q04(){
         scanf("%c", &sexo);
 
         if( sexo == 'M' && idade > 21 ){
-            prinf("%s",nome");
+        printf("%d",nome);
         }
     }
+}
 
 //5. Sabendo-se que a unidade lógica e aritmética calcula o produto através de somas
 //sucessivas, crie um programa que calcule o produto de dois números inteiros
 //lidos. Suponha que os números lidos sejam positivos.
+void q05(){
+int num1,num2,produto;
+printf("Digite o primeiro numero positivo:\n");
+scanf("%d", &num1);
+
+printf("Digite o segundoo numero positivo:\n");
+scanf("%d", &num2);
+
+produto = num1 * num2;
+
+printf("O produto de %d e %d é: %d\n", num1,num2,produto);
+
+}
 
 //6. Crie um programa que imprima os 20 primeiros termos da série de Fibonacci.
 //Observação: os dois primeiros termos desta série são 1 e 1 e os demais são gerados
 //a partir da soma dos anteriores. Exemplo:
 //• 1 + 1 = 2, terceiro termo;
 //• 1 + 2 = 3, quarto termo, etc.
+void q06(){
+    int n0 = 0;
+    int n1 = 1;
+    for( int t = 2; t < 21; t++){
+        
+        
+        printf("%d",n);
+        
+
+
+}
 
 //7. Crie um programa que permita entrar com o nome, a nota da
 //prova 1 e da prova 2 de 15 alunos. Ao final, imprimir uma listagem, contendo:
